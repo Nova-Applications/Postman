@@ -1,0 +1,418 @@
+{
+	"info": {
+		"_postman_id": "4d812e48-1eab-4b9f-acf1-9df1c7ee698e",
+		"name": "Nova",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13651930"
+	},
+	"item": [
+		{
+			"name": "Auth User",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@nova.com\",\r\n    \"password\": \"Test@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://nova-identity-ecerctbkbcdug4e8.eastus-01.azurewebsites.net/users/auth",
+					"protocol": "https",
+					"host": [
+						"nova-identity-ecerctbkbcdug4e8",
+						"eastus-01",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"users",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Me",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJQZWRyaXRvIiwibGFzdE5hbWUiOiJBbGltYcOxYSIsInBhc3N3b3JkIjoiJDJiJDEwJE96VVk3VEJadUNpWmxpbGVZZi5mYXVQZDBJdVNPNllESm96QXZPZGRVeEYvZEUudVRkU1RtIiwicGhvbmVOdW1iZXIiOiI5MzY1Mzk0MjEiLCJpZGVudGlmaWNhdGlvblR5cGUiOiJETkkiLCJpZGVudGlmaWNhdGlvbk51bWJlciI6IjcyOTQ5MTA5Iiwicm9sZXMiOlsiQURNSU4iXSwidXBkYXRlZEJ5IjoiMGU4NTYxMzktODBjZC00MTI1LTllMjYtMDJlZTQ5ZTNhZjI2IiwiaWQiOiIwZTg1NjEzOS04MGNkLTQxMjUtOWUyNi0wMmVlNDllM2FmMjYiLCJ1c2VybmFtZSI6ImFkbWluQG5vdmEuY29tIiwiZW1haWwiOiJhZG1pbkBub3ZhLmNvbSIsImltYWdlVXJsIjoiaHR0cHM6Ly9zdGF0aWMudmVjdGVlenkuY29tL3N5c3RlbS9yZXNvdXJjZXMvcHJldmlld3MvMDAxLzg0MC82MTIvbm9uXzJ4L3BpY3R1cmUtcHJvZmlsZS1pY29uLW1hbGUtaWNvbi1odW1hbi1vci1wZW9wbGUtc2lnbi1hbmQtc3ltYm9sLWZyZWUtdmVjdG9yLmpwZyIsImNyZWF0ZWRBdCI6IjIwMjQtMTItMzBUMTg6MTM6MjkuODc3WiIsImNyZWF0ZWRCeSI6IlNZU1RFTSIsInVwZGF0ZWRBdCI6IjIwMjUtMDItMDdUMjA6NDA6MDIuNjAzWiIsIl9yaWQiOiJ3YXh1QUlpcTh1d0JBQUFBQUFBQUFBPT0iLCJfc2VsZiI6ImRicy93YXh1QUE9PS9jb2xscy93YXh1QUlpcTh1dz0vZG9jcy93YXh1QUlpcTh1d0JBQUFBQUFBQUFBPT0vIiwiX2V0YWciOiJcIjAzMDBjNTYyLTAwMDAtMDMwMC0wMDAwLTY3YTY2ZmEzMDAwMFwiIiwiX2F0dGFjaG1lbnRzIjoiYXR0YWNobWVudHMvIiwiX3RzIjoxNzM4OTYwODAzLCJpYXQiOjE3Mzg5NjEwNDcsImV4cCI6MTczOTU2NTg0N30.BVtNFMMCuQi03bW0OxW0bdNogskCjqQoUqc-rEbhikw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://nova-identity-ecerctbkbcdug4e8.eastus-01.azurewebsites.net/users/me",
+					"protocol": "https",
+					"host": [
+						"nova-identity-ecerctbkbcdug4e8",
+						"eastus-01",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJQZWRyaXRvIiwibGFzdE5hbWUiOiJBbGltYcOxYSIsInBhc3N3b3JkIjoiJDJiJDEwJE96VVk3VEJadUNpWmxpbGVZZi5mYXVQZDBJdVNPNllESm96QXZPZGRVeEYvZEUudVRkU1RtIiwicGhvbmVOdW1iZXIiOiI5MzY1Mzk0MjEiLCJpZGVudGlmaWNhdGlvblR5cGUiOiJETkkiLCJpZGVudGlmaWNhdGlvbk51bWJlciI6IjcyOTQ5MTA5Iiwicm9sZXMiOlsiQURNSU4iXSwidXBkYXRlZEJ5IjoiMGU4NTYxMzktODBjZC00MTI1LTllMjYtMDJlZTQ5ZTNhZjI2IiwiaWQiOiIwZTg1NjEzOS04MGNkLTQxMjUtOWUyNi0wMmVlNDllM2FmMjYiLCJ1c2VybmFtZSI6ImFkbWluQG5vdmEuY29tIiwiZW1haWwiOiJhZG1pbkBub3ZhLmNvbSIsImltYWdlVXJsIjoiaHR0cHM6Ly9zdGF0aWMudmVjdGVlenkuY29tL3N5c3RlbS9yZXNvdXJjZXMvcHJldmlld3MvMDAxLzg0MC82MTIvbm9uXzJ4L3BpY3R1cmUtcHJvZmlsZS1pY29uLW1hbGUtaWNvbi1odW1hbi1vci1wZW9wbGUtc2lnbi1hbmQtc3ltYm9sLWZyZWUtdmVjdG9yLmpwZyIsImNyZWF0ZWRBdCI6IjIwMjQtMTItMzBUMTg6MTM6MjkuODc3WiIsImNyZWF0ZWRCeSI6IlNZU1RFTSIsInVwZGF0ZWRBdCI6IjIwMjUtMDItMDdUMjA6NDA6MDIuNjAzWiIsIl9yaWQiOiJ3YXh1QUlpcTh1d0JBQUFBQUFBQUFBPT0iLCJfc2VsZiI6ImRicy93YXh1QUE9PS9jb2xscy93YXh1QUlpcTh1dz0vZG9jcy93YXh1QUlpcTh1d0JBQUFBQUFBQUFBPT0vIiwiX2V0YWciOiJcIjAzMDBjNTYyLTAwMDAtMDMwMC0wMDAwLTY3YTY2ZmEzMDAwMFwiIiwiX2F0dGFjaG1lbnRzIjoiYXR0YWNobWVudHMvIiwiX3RzIjoxNzM4OTYwODAzLCJpYXQiOjE3Mzg5NjEwNDcsImV4cCI6MTczOTU2NTg0N30.BVtNFMMCuQi03bW0OxW0bdNogskCjqQoUqc-rEbhikw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"rodrogo@gmail.com\",\r\n    \"firstName\": \"Rodrigo\",\r\n    \"lastName\": \"Molero\",\r\n    \"email\": \"rodrogo@gmail.com\",\r\n    \"password\": \"Test@123\",\r\n    \"role\": \"ADMIN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://nova-identity-ecerctbkbcdug4e8.eastus-01.azurewebsites.net/users/create-user",
+					"protocol": "https",
+					"host": [
+						"nova-identity-ecerctbkbcdug4e8",
+						"eastus-01",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"users",
+						"create-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Facilities",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBlODU2MTM5LTgwY2QtNDEyNS05ZTI2LTAyZWU0OWUzYWYyNiIsInVzZXJuYW1lIjoiYWRtaW5Abm92YS5jb20iLCJmaXJzdE5hbWUiOiJhZG1pbiIsImxhc3ROYW1lIjoibm92YSIsImltYWdlVXJsIjoiaHR0cHM6Ly9zdGF0aWMudmVjdGVlenkuY29tL3N5c3RlbS9yZXNvdXJjZXMvcHJldmlld3MvMDAxLzg0MC82MTIvbm9uXzJ4L3BpY3R1cmUtcHJvZmlsZS1pY29uLW1hbGUtaWNvbi1odW1hbi1vci1wZW9wbGUtc2lnbi1hbmQtc3ltYm9sLWZyZWUtdmVjdG9yLmpwZyIsImVtYWlsIjoiYWRtaW5Abm92YS5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQuamJzUFNXUEZrb1IzWEZpQ0hyQ0kuTFhVcDdFYXBBWXdBTGZSWkNzOERLdkkxZi5XcGZSQyIsInBob25lTnVtYmVyIjoiOTM2NTM5NDIwIiwiaWRlbnRpZmljYXRpb25UeXBlIjoiRE5JIiwiaWRlbnRpZmljYXRpb25OdW1iZXIiOiI3Mjk0OTEwOSIsInJvbGVzIjpbIkFETUlOIl0sImNyZWF0ZWRBdCI6IjIwMjQtMTItMzBUMTg6MTM6MjkuODc3WiIsImNyZWF0ZWRCeSI6IlNZU1RFTSIsInVwZGF0ZWRBdCI6bnVsbCwidXBkYXRlZEJ5IjpudWxsLCJfcmlkIjoid2F4dUFJaXE4dXdCQUFBQUFBQUFBQT09IiwiX3NlbGYiOiJkYnMvd2F4dUFBPT0vY29sbHMvd2F4dUFJaXE4dXc9L2RvY3Mvd2F4dUFJaXE4dXdCQUFBQUFBQUFBQT09LyIsIl9ldGFnIjoiXCJkZjAyMDA3YS0wMDAwLTAzMDAtMDAwMC02NzhiMTFjNTAwMDBcIiIsIl9hdHRhY2htZW50cyI6ImF0dGFjaG1lbnRzLyIsIl90cyI6MTczNzE2NzMwMSwiaWF0IjoxNzM3MTY3NDM4LCJleHAiOjE3Mzc3NzIyMzh9.avCdB_YZVtvEmmHdr2kS2ax-B9GU_SmzZWCE9-TP4-4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"cancha 1\",\r\n    \"address\": \"jr augusto aguirre 3068\",\r\n    \"courtsTotal\": 5,\r\n    \"ubigeo\": \"150126\",\r\n    \"latitude\": \"-12.4554\",\r\n    \"longitude\": \"27.3433\",\r\n    \"capacity\": \"100\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://nova-core-fjafg6dzf0h9dwhs.eastus-01.azurewebsites.net/facilities/create",
+					"protocol": "https",
+					"host": [
+						"nova-core-fjafg6dzf0h9dwhs",
+						"eastus-01",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"facilities",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Facility",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBlODU2MTM5LTgwY2QtNDEyNS05ZTI2LTAyZWU0OWUzYWYyNiIsInVzZXJuYW1lIjoiYWRtaW5Abm92YS5jb20iLCJmaXJzdE5hbWUiOiJhZG1pbiIsImxhc3ROYW1lIjoibm92YSIsImltYWdlVXJsIjoiaHR0cHM6Ly9zdGF0aWMudmVjdGVlenkuY29tL3N5c3RlbS9yZXNvdXJjZXMvcHJldmlld3MvMDAxLzg0MC82MTIvbm9uXzJ4L3BpY3R1cmUtcHJvZmlsZS1pY29uLW1hbGUtaWNvbi1odW1hbi1vci1wZW9wbGUtc2lnbi1hbmQtc3ltYm9sLWZyZWUtdmVjdG9yLmpwZyIsImVtYWlsIjoiYWRtaW5Abm92YS5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQuamJzUFNXUEZrb1IzWEZpQ0hyQ0kuTFhVcDdFYXBBWXdBTGZSWkNzOERLdkkxZi5XcGZSQyIsInBob25lTnVtYmVyIjoiOTM2NTM5NDIwIiwiaWRlbnRpZmljYXRpb25UeXBlIjoiRE5JIiwiaWRlbnRpZmljYXRpb25OdW1iZXIiOiI3Mjk0OTEwOSIsInJvbGVzIjpbIkFETUlOIl0sImNyZWF0ZWRBdCI6IjIwMjQtMTItMzBUMTg6MTM6MjkuODc3WiIsImNyZWF0ZWRCeSI6IlNZU1RFTSIsInVwZGF0ZWRBdCI6bnVsbCwidXBkYXRlZEJ5IjpudWxsLCJfcmlkIjoid2F4dUFJaXE4dXdCQUFBQUFBQUFBQT09IiwiX3NlbGYiOiJkYnMvd2F4dUFBPT0vY29sbHMvd2F4dUFJaXE4dXc9L2RvY3Mvd2F4dUFJaXE4dXdCQUFBQUFBQUFBQT09LyIsIl9ldGFnIjoiXCJkZjAyMDA3YS0wMDAwLTAzMDAtMDAwMC02NzhiMTFjNTAwMDBcIiIsIl9hdHRhY2htZW50cyI6ImF0dGFjaG1lbnRzLyIsIl90cyI6MTczNzE2NzMwMSwiaWF0IjoxNzM3MTY3NDM4LCJleHAiOjE3Mzc3NzIyMzh9.avCdB_YZVtvEmmHdr2kS2ax-B9GU_SmzZWCE9-TP4-4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://nova-core-fjafg6dzf0h9dwhs.eastus-01.azurewebsites.net/facilities/824a15c6-5ac5-ff5b-a3e7-ffe14827c041",
+					"protocol": "https",
+					"host": [
+						"nova-core-fjafg6dzf0h9dwhs",
+						"eastus-01",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"facilities",
+						"824a15c6-5ac5-ff5b-a3e7-ffe14827c041"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Facility Image",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBlODU2MTM5LTgwY2QtNDEyNS05ZTI2LTAyZWU0OWUzYWYyNiIsInVzZXJuYW1lIjoiYWRtaW5Abm92YS5jb20iLCJmaXJzdE5hbWUiOiJhZG1pbiIsImxhc3ROYW1lIjoibm92YSIsImltYWdlVXJsIjoiaHR0cHM6Ly9zdGF0aWMudmVjdGVlenkuY29tL3N5c3RlbS9yZXNvdXJjZXMvcHJldmlld3MvMDAxLzg0MC82MTIvbm9uXzJ4L3BpY3R1cmUtcHJvZmlsZS1pY29uLW1hbGUtaWNvbi1odW1hbi1vci1wZW9wbGUtc2lnbi1hbmQtc3ltYm9sLWZyZWUtdmVjdG9yLmpwZyIsImVtYWlsIjoiYWRtaW5Abm92YS5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQuamJzUFNXUEZrb1IzWEZpQ0hyQ0kuTFhVcDdFYXBBWXdBTGZSWkNzOERLdkkxZi5XcGZSQyIsInBob25lTnVtYmVyIjoiOTM2NTM5NDIwIiwiaWRlbnRpZmljYXRpb25UeXBlIjoiRE5JIiwiaWRlbnRpZmljYXRpb25OdW1iZXIiOiI3Mjk0OTEwOSIsInJvbGVzIjpbIkFETUlOIl0sImNyZWF0ZWRBdCI6IjIwMjQtMTItMzBUMTg6MTM6MjkuODc3WiIsImNyZWF0ZWRCeSI6IlNZU1RFTSIsInVwZGF0ZWRBdCI6bnVsbCwidXBkYXRlZEJ5IjpudWxsLCJfcmlkIjoid2F4dUFJaXE4dXdCQUFBQUFBQUFBQT09IiwiX3NlbGYiOiJkYnMvd2F4dUFBPT0vY29sbHMvd2F4dUFJaXE4dXc9L2RvY3Mvd2F4dUFJaXE4dXdCQUFBQUFBQUFBQT09LyIsIl9ldGFnIjoiXCJkZjAyMDA3YS0wMDAwLTAzMDAtMDAwMC02NzhiMTFjNTAwMDBcIiIsIl9hdHRhY2htZW50cyI6ImF0dGFjaG1lbnRzLyIsIl90cyI6MTczNzE2NzMwMSwiaWF0IjoxNzM3MTY3NDM4LCJleHAiOjE3Mzc3NzIyMzh9.avCdB_YZVtvEmmHdr2kS2ax-B9GU_SmzZWCE9-TP4-4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/D:/Usuarios/ocabrera/OneDrive - Conecta Retail S.A/Escritorio/campo.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://nova-core-fjafg6dzf0h9dwhs.eastus-01.azurewebsites.net/facilities/824a15c6-5ac5-ff5b-a3e7-ffe14827c041/add-image",
+					"protocol": "https",
+					"host": [
+						"nova-core-fjafg6dzf0h9dwhs",
+						"eastus-01",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"facilities",
+						"824a15c6-5ac5-ff5b-a3e7-ffe14827c041",
+						"add-image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Facility Image",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBlODU2MTM5LTgwY2QtNDEyNS05ZTI2LTAyZWU0OWUzYWYyNiIsInVzZXJuYW1lIjoiYWRtaW5Abm92YS5jb20iLCJmaXJzdE5hbWUiOiJhZG1pbiIsImxhc3ROYW1lIjoibm92YSIsImltYWdlVXJsIjoiaHR0cHM6Ly9zdGF0aWMudmVjdGVlenkuY29tL3N5c3RlbS9yZXNvdXJjZXMvcHJldmlld3MvMDAxLzg0MC82MTIvbm9uXzJ4L3BpY3R1cmUtcHJvZmlsZS1pY29uLW1hbGUtaWNvbi1odW1hbi1vci1wZW9wbGUtc2lnbi1hbmQtc3ltYm9sLWZyZWUtdmVjdG9yLmpwZyIsImVtYWlsIjoiYWRtaW5Abm92YS5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQuamJzUFNXUEZrb1IzWEZpQ0hyQ0kuTFhVcDdFYXBBWXdBTGZSWkNzOERLdkkxZi5XcGZSQyIsInBob25lTnVtYmVyIjoiOTM2NTM5NDIwIiwiaWRlbnRpZmljYXRpb25UeXBlIjoiRE5JIiwiaWRlbnRpZmljYXRpb25OdW1iZXIiOiI3Mjk0OTEwOSIsInJvbGVzIjpbIkFETUlOIl0sImNyZWF0ZWRBdCI6IjIwMjQtMTItMzBUMTg6MTM6MjkuODc3WiIsImNyZWF0ZWRCeSI6IlNZU1RFTSIsInVwZGF0ZWRBdCI6bnVsbCwidXBkYXRlZEJ5IjpudWxsLCJfcmlkIjoid2F4dUFJaXE4dXdCQUFBQUFBQUFBQT09IiwiX3NlbGYiOiJkYnMvd2F4dUFBPT0vY29sbHMvd2F4dUFJaXE4dXc9L2RvY3Mvd2F4dUFJaXE4dXdCQUFBQUFBQUFBQT09LyIsIl9ldGFnIjoiXCJkZjAyMDA3YS0wMDAwLTAzMDAtMDAwMC02NzhiMTFjNTAwMDBcIiIsIl9hdHRhY2htZW50cyI6ImF0dGFjaG1lbnRzLyIsIl90cyI6MTczNzE2NzMwMSwiaWF0IjoxNzM3MTY3NDM4LCJleHAiOjE3Mzc3NzIyMzh9.avCdB_YZVtvEmmHdr2kS2ax-B9GU_SmzZWCE9-TP4-4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://nova-core-fjafg6dzf0h9dwhs.eastus-01.azurewebsites.net/facilities/824a15c6-5ac5-ff5b-a3e7-ffe14827c041/images/ef5b2d8d-de50-235c-4c46-38d27fbb6521",
+					"protocol": "https",
+					"host": [
+						"nova-core-fjafg6dzf0h9dwhs",
+						"eastus-01",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"facilities",
+						"824a15c6-5ac5-ff5b-a3e7-ffe14827c041",
+						"images",
+						"ef5b2d8d-de50-235c-4c46-38d27fbb6521"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBlODU2MTM5LTgwY2QtNDEyNS05ZTI2LTAyZWU0OWUzYWYyNiIsInVzZXJuYW1lIjoiYWRtaW5Abm92YS5jb20iLCJmaXJzdE5hbWUiOiJhZG1pbiIsImxhc3ROYW1lIjoibm92YSIsImltYWdlVXJsIjoiaHR0cHM6Ly9zdGF0aWMudmVjdGVlenkuY29tL3N5c3RlbS9yZXNvdXJjZXMvcHJldmlld3MvMDAxLzg0MC82MTIvbm9uXzJ4L3BpY3R1cmUtcHJvZmlsZS1pY29uLW1hbGUtaWNvbi1odW1hbi1vci1wZW9wbGUtc2lnbi1hbmQtc3ltYm9sLWZyZWUtdmVjdG9yLmpwZyIsImVtYWlsIjoiYWRtaW5Abm92YS5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQuamJzUFNXUEZrb1IzWEZpQ0hyQ0kuTFhVcDdFYXBBWXdBTGZSWkNzOERLdkkxZi5XcGZSQyIsInBob25lTnVtYmVyIjoiOTM2NTM5NDIwIiwiaWRlbnRpZmljYXRpb25UeXBlIjoiRE5JIiwiaWRlbnRpZmljYXRpb25OdW1iZXIiOiI3Mjk0OTEwOSIsInJvbGVzIjpbIkFETUlOIl0sImNyZWF0ZWRBdCI6IjIwMjQtMTItMzBUMTg6MTM6MjkuODc3WiIsImNyZWF0ZWRCeSI6IlNZU1RFTSIsInVwZGF0ZWRBdCI6bnVsbCwidXBkYXRlZEJ5IjpudWxsLCJfcmlkIjoid2F4dUFJaXE4dXdCQUFBQUFBQUFBQT09IiwiX3NlbGYiOiJkYnMvd2F4dUFBPT0vY29sbHMvd2F4dUFJaXE4dXc9L2RvY3Mvd2F4dUFJaXE4dXdCQUFBQUFBQUFBQT09LyIsIl9ldGFnIjoiXCJkZjAyMDA3YS0wMDAwLTAzMDAtMDAwMC02NzhiMTFjNTAwMDBcIiIsIl9hdHRhY2htZW50cyI6ImF0dGFjaG1lbnRzLyIsIl90cyI6MTczNzE2NzMwMSwiaWF0IjoxNzM4OTYwNDIwLCJleHAiOjE3Mzk1NjUyMjB9.F0t4V7m0vzzNwPtB-2k9t8ZFINjXIXS1dg_q9Jus87Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Pedrito\",\r\n    \"lastName\": \"Alimaña\",\r\n    \"phoneNumber\": \"936539421\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://nova-identity-ecerctbkbcdug4e8.eastus-01.azurewebsites.net/users/update-user",
+					"protocol": "https",
+					"host": [
+						"nova-identity-ecerctbkbcdug4e8",
+						"eastus-01",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"users",
+						"update-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find User By Email",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://nova-identity-ecerctbkbcdug4e8.eastus-01.azurewebsites.net/users/by/email/oscar157.2000@gmail.com",
+					"protocol": "https",
+					"host": [
+						"nova-identity-ecerctbkbcdug4e8",
+						"eastus-01",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"users",
+						"by",
+						"email",
+						"oscar157.2000@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User Password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBlODU2MTM5LTgwY2QtNDEyNS05ZTI2LTAyZWU0OWUzYWYyNiIsInVzZXJuYW1lIjoiYWRtaW5Abm92YS5jb20iLCJmaXJzdE5hbWUiOiJhZG1pbiIsImxhc3ROYW1lIjoibm92YSIsImltYWdlVXJsIjoiaHR0cHM6Ly9zdGF0aWMudmVjdGVlenkuY29tL3N5c3RlbS9yZXNvdXJjZXMvcHJldmlld3MvMDAxLzg0MC82MTIvbm9uXzJ4L3BpY3R1cmUtcHJvZmlsZS1pY29uLW1hbGUtaWNvbi1odW1hbi1vci1wZW9wbGUtc2lnbi1hbmQtc3ltYm9sLWZyZWUtdmVjdG9yLmpwZyIsImVtYWlsIjoiYWRtaW5Abm92YS5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQuamJzUFNXUEZrb1IzWEZpQ0hyQ0kuTFhVcDdFYXBBWXdBTGZSWkNzOERLdkkxZi5XcGZSQyIsInBob25lTnVtYmVyIjoiOTM2NTM5NDIwIiwiaWRlbnRpZmljYXRpb25UeXBlIjoiRE5JIiwiaWRlbnRpZmljYXRpb25OdW1iZXIiOiI3Mjk0OTEwOSIsInJvbGVzIjpbIkFETUlOIl0sImNyZWF0ZWRBdCI6IjIwMjQtMTItMzBUMTg6MTM6MjkuODc3WiIsImNyZWF0ZWRCeSI6IlNZU1RFTSIsInVwZGF0ZWRBdCI6bnVsbCwidXBkYXRlZEJ5IjpudWxsLCJfcmlkIjoid2F4dUFJaXE4dXdCQUFBQUFBQUFBQT09IiwiX3NlbGYiOiJkYnMvd2F4dUFBPT0vY29sbHMvd2F4dUFJaXE4dXc9L2RvY3Mvd2F4dUFJaXE4dXdCQUFBQUFBQUFBQT09LyIsIl9ldGFnIjoiXCJkZjAyMDA3YS0wMDAwLTAzMDAtMDAwMC02NzhiMTFjNTAwMDBcIiIsIl9hdHRhY2htZW50cyI6ImF0dGFjaG1lbnRzLyIsIl90cyI6MTczNzE2NzMwMSwiaWF0IjoxNzM4OTYwNDIwLCJleHAiOjE3Mzk1NjUyMjB9.F0t4V7m0vzzNwPtB-2k9t8ZFINjXIXS1dg_q9Jus87Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"Test@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://nova-identity-ecerctbkbcdug4e8.eastus-01.azurewebsites.net/users/update-password",
+					"protocol": "https",
+					"host": [
+						"nova-identity-ecerctbkbcdug4e8",
+						"eastus-01",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"users",
+						"update-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User Image",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQwY2Q2MWZjLTZjMWQtZGI2Ni05YjIyLTZkZTJhNDY1NDgzMiIsImZpcnN0TmFtZSI6Ik9zY2FyIiwibGFzdE5hbWUiOiJDYWJyZXJhIiwidXNlcm5hbWUiOiJvc2NhcjE1Ny4yMDAwQGdtYWlsLmNvbSIsImVtYWlsIjoib3NjYXIxNTcuMjAwMEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQvQ2thZnR0S2UyeVVrMk1wZ29FZzdlUzI2ZmJWdjl1OHIuQ1IydHZwMWRtUUwvRXQ2VjBaNiIsImltYWdlVXJsIjpudWxsLCJwaG9uZU51bWJlciI6bnVsbCwiaWRlbnRpZmljYXRpb25UeXBlIjpudWxsLCJpZGVudGlmaWNhdGlvbk51bWJlciI6bnVsbCwiY3JlYXRlZEF0IjoiMjAyNS0wMS0xOFQwMjo0MDowNy4wNjFaIiwiY3JlYXRlZEJ5IjoiMGU4NTYxMzktODBjZC00MTI1LTllMjYtMDJlZTQ5ZTNhZjI2Iiwicm9sZXMiOlsiVVNFUiJdLCJfcmlkIjoid2F4dUFJaXE4dXdDQUFBQUFBQUFBQT09IiwiX3NlbGYiOiJkYnMvd2F4dUFBPT0vY29sbHMvd2F4dUFJaXE4dXc9L2RvY3Mvd2F4dUFJaXE4dXdDQUFBQUFBQUFBQT09LyIsIl9ldGFnIjoiXCJkZjAyMDE3YS0wMDAwLTAzMDAtMDAwMC02NzhiMTRiNjAwMDBcIiIsIl9hdHRhY2htZW50cyI6ImF0dGFjaG1lbnRzLyIsIl90cyI6MTczNzE2ODA1NCwiaWF0IjoxNzM4OTU5MDY3LCJleHAiOjE3Mzk1NjM4Njd9.5WWDZqgDVoiE69PxrSkHf4F-Ex3Lao_JUQwaGpNFD9I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/D:/Usuarios/ocabrera/OneDrive - Conecta Retail S.A/Escritorio/campo.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://nova-identity-ecerctbkbcdug4e8.eastus-01.azurewebsites.net/users/update-user-image",
+					"protocol": "https",
+					"host": [
+						"nova-identity-ecerctbkbcdug4e8",
+						"eastus-01",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"users",
+						"update-user-image"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
