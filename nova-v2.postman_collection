@@ -1,0 +1,405 @@
+{
+	"info": {
+		"_postman_id": "4d812e48-1eab-4b9f-acf1-9df1c7ee698e",
+		"name": "Nova",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13651930"
+	},
+	"item": [
+		{
+			"name": "Auth User",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"oscar@nova.com\",\r\n    \"password\": \"Test@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Api.Identity}}/users/auth",
+					"host": [
+						"{{Api.Identity}}"
+					],
+					"path": [
+						"users",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Me",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImRiZGFlNWI1LTAyY2QtZjI4Yi05Yjc4LTc1ODcwOGJlY2UzMSIsImZpcnN0TmFtZSI6IlJvZHJpZ28iLCJsYXN0TmFtZSI6Ik1vbGVybyIsInVzZXJuYW1lIjoicm9kcm9nb0BnbWFpbC5jb20iLCJlbWFpbCI6InJvZHJvZ29AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkbS5DMm5hVHdBWU53emNadi5rZUd1LnFZSXE1SDBVZmNPWVU5SmEyZTlReXRWY0lDVllINVciLCJpbWFnZVVybCI6bnVsbCwicGhvbmVOdW1iZXIiOm51bGwsImlkZW50aWZpY2F0aW9uVHlwZSI6bnVsbCwiaWRlbnRpZmljYXRpb25OdW1iZXIiOm51bGwsImNyZWF0ZWRBdCI6IjIwMjUtMDMtMDhUMDM6Mzk6NTMuMDQyWiIsImNyZWF0ZWRCeSI6IjBlODU2MTM5LTgwY2QtNDEyNS05ZTI2LTAyZWU0OWUzYWYyNiIsInJvbGVzIjpbIkFETUlOIl0sIl9yaWQiOiJ3YXh1QUlpcTh1d0dBQUFBQUFBQUFBPT0iLCJfc2VsZiI6ImRicy93YXh1QUE9PS9jb2xscy93YXh1QUlpcTh1dz0vZG9jcy93YXh1QUlpcTh1d0dBQUFBQUFBQUFBPT0vIiwiX2V0YWciOiJcIjA3MDBjMjA1LTAwMDAtMDMwMC0wMDAwLTY3Y2Y2NjJlMDAwMFwiIiwiX2F0dGFjaG1lbnRzIjoiYXR0YWNobWVudHMvIiwiX3RzIjoxNzQxNjQ1MzU4LCJpYXQiOjE3NDE2NDUzODIsImV4cCI6MTc0MjI1MDE4Mn0.Y2wfiX7ZBzh7kN2RLG2tL4ebohKDEwuH5VKPE5tyiaY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Api.Identity}}/users/me",
+					"host": [
+						"{{Api.Identity}}"
+					],
+					"path": [
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZVVybCI6Imh0dHBzOi8vbm92YXN0b3JhZ2VzdGFnaW5nMS5ibG9iLmNvcmUud2luZG93cy5uZXQvZmlsZXMvMDBiNTQ0ZGMtMjViMS1lODFjLTZkZTItNDhmZmIyNTRiNjU4LndlYnAiLCJpZCI6IjBlODU2MTM5LTgwY2QtNDEyNS05ZTI2LTAyZWU0OWUzYWYyNiIsInVzZXJuYW1lIjoiYWRtaW5Abm92YS5jb20iLCJlbWFpbCI6ImFkbWluQG5vdmEuY29tIiwiZmlyc3ROYW1lIjoiUGVkcml0byIsImxhc3ROYW1lIjoiQWxpbWHDsWEiLCJwYXNzd29yZCI6IiQyYiQxMCRPelVZN1RCWnVDaVpsaWxlWWYuZmF1UGQwSXVTTzZZREpvekF2T2RkVXhGL2RFLnVUZFNUbSIsInBob25lTnVtYmVyIjoiOTM2NTM5NDIxIiwiaWRlbnRpZmljYXRpb25UeXBlIjoiRE5JIiwiaWRlbnRpZmljYXRpb25OdW1iZXIiOiI3Mjk0OTEwOSIsInJvbGVzIjpbIkFETUlOIl0sImNyZWF0ZWRBdCI6IjIwMjQtMTItMzBUMTg6MTM6MjkuODc3WiIsImNyZWF0ZWRCeSI6IlNZU1RFTSIsInVwZGF0ZWRBdCI6IjIwMjUtMDItMDdUMjA6NTI6MTUuOTkwWiIsInVwZGF0ZWRCeSI6IjBlODU2MTM5LTgwY2QtNDEyNS05ZTI2LTAyZWU0OWUzYWYyNiIsIl9yaWQiOiJ3YXh1QUlpcTh1d0JBQUFBQUFBQUFBPT0iLCJfc2VsZiI6ImRicy93YXh1QUE9PS9jb2xscy93YXh1QUlpcTh1dz0vZG9jcy93YXh1QUlpcTh1d0JBQUFBQUFBQUFBPT0vIiwiX2V0YWciOiJcIjAzMDA5MzY4LTAwMDAtMDMwMC0wMDAwLTY3YTY3MjgxMDAwMFwiIiwiX2F0dGFjaG1lbnRzIjoiYXR0YWNobWVudHMvIiwiX3RzIjoxNzM4OTYxNTM3LCJpYXQiOjE3NDE0MDQ4NTAsImV4cCI6MTc0MjAwOTY1MH0.lZZWYO-PyXcUm0v68pHKqawsppBn_niW78CD_1zmBSg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Rodrigo\",\r\n    \"lastName\": \"Molero\",\r\n    \"email\": \"rodrogo@gmail.com\",\r\n    \"password\": \"Test@123\",\r\n    \"role\": \"ADMIN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Api.Identity}}/users/create-user",
+					"host": [
+						"{{Api.Identity}}"
+					],
+					"path": [
+						"users",
+						"create-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Facilities",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBlODU2MTM5LTgwY2QtNDEyNS05ZTI2LTAyZWU0OWUzYWYyNiIsInVzZXJuYW1lIjoiYWRtaW5Abm92YS5jb20iLCJmaXJzdE5hbWUiOiJhZG1pbiIsImxhc3ROYW1lIjoibm92YSIsImltYWdlVXJsIjoiaHR0cHM6Ly9zdGF0aWMudmVjdGVlenkuY29tL3N5c3RlbS9yZXNvdXJjZXMvcHJldmlld3MvMDAxLzg0MC82MTIvbm9uXzJ4L3BpY3R1cmUtcHJvZmlsZS1pY29uLW1hbGUtaWNvbi1odW1hbi1vci1wZW9wbGUtc2lnbi1hbmQtc3ltYm9sLWZyZWUtdmVjdG9yLmpwZyIsImVtYWlsIjoiYWRtaW5Abm92YS5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQuamJzUFNXUEZrb1IzWEZpQ0hyQ0kuTFhVcDdFYXBBWXdBTGZSWkNzOERLdkkxZi5XcGZSQyIsInBob25lTnVtYmVyIjoiOTM2NTM5NDIwIiwiaWRlbnRpZmljYXRpb25UeXBlIjoiRE5JIiwiaWRlbnRpZmljYXRpb25OdW1iZXIiOiI3Mjk0OTEwOSIsInJvbGVzIjpbIkFETUlOIl0sImNyZWF0ZWRBdCI6IjIwMjQtMTItMzBUMTg6MTM6MjkuODc3WiIsImNyZWF0ZWRCeSI6IlNZU1RFTSIsInVwZGF0ZWRBdCI6bnVsbCwidXBkYXRlZEJ5IjpudWxsLCJfcmlkIjoid2F4dUFJaXE4dXdCQUFBQUFBQUFBQT09IiwiX3NlbGYiOiJkYnMvd2F4dUFBPT0vY29sbHMvd2F4dUFJaXE4dXc9L2RvY3Mvd2F4dUFJaXE4dXdCQUFBQUFBQUFBQT09LyIsIl9ldGFnIjoiXCJkZjAyMDA3YS0wMDAwLTAzMDAtMDAwMC02NzhiMTFjNTAwMDBcIiIsIl9hdHRhY2htZW50cyI6ImF0dGFjaG1lbnRzLyIsIl90cyI6MTczNzE2NzMwMSwiaWF0IjoxNzM3MTY3NDM4LCJleHAiOjE3Mzc3NzIyMzh9.avCdB_YZVtvEmmHdr2kS2ax-B9GU_SmzZWCE9-TP4-4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"cancha 1\",\r\n    \"address\": \"jr augusto aguirre 3068\",\r\n    \"courtsTotal\": 5,\r\n    \"ubigeo\": \"150126\",\r\n    \"latitude\": \"-12.4554\",\r\n    \"longitude\": \"27.3433\",\r\n    \"capacity\": \"100\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://nova-core-fjafg6dzf0h9dwhs.eastus-01.azurewebsites.net/facilities/create",
+					"protocol": "https",
+					"host": [
+						"nova-core-fjafg6dzf0h9dwhs",
+						"eastus-01",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"facilities",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Facility",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBlODU2MTM5LTgwY2QtNDEyNS05ZTI2LTAyZWU0OWUzYWYyNiIsInVzZXJuYW1lIjoiYWRtaW5Abm92YS5jb20iLCJmaXJzdE5hbWUiOiJhZG1pbiIsImxhc3ROYW1lIjoibm92YSIsImltYWdlVXJsIjoiaHR0cHM6Ly9zdGF0aWMudmVjdGVlenkuY29tL3N5c3RlbS9yZXNvdXJjZXMvcHJldmlld3MvMDAxLzg0MC82MTIvbm9uXzJ4L3BpY3R1cmUtcHJvZmlsZS1pY29uLW1hbGUtaWNvbi1odW1hbi1vci1wZW9wbGUtc2lnbi1hbmQtc3ltYm9sLWZyZWUtdmVjdG9yLmpwZyIsImVtYWlsIjoiYWRtaW5Abm92YS5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQuamJzUFNXUEZrb1IzWEZpQ0hyQ0kuTFhVcDdFYXBBWXdBTGZSWkNzOERLdkkxZi5XcGZSQyIsInBob25lTnVtYmVyIjoiOTM2NTM5NDIwIiwiaWRlbnRpZmljYXRpb25UeXBlIjoiRE5JIiwiaWRlbnRpZmljYXRpb25OdW1iZXIiOiI3Mjk0OTEwOSIsInJvbGVzIjpbIkFETUlOIl0sImNyZWF0ZWRBdCI6IjIwMjQtMTItMzBUMTg6MTM6MjkuODc3WiIsImNyZWF0ZWRCeSI6IlNZU1RFTSIsInVwZGF0ZWRBdCI6bnVsbCwidXBkYXRlZEJ5IjpudWxsLCJfcmlkIjoid2F4dUFJaXE4dXdCQUFBQUFBQUFBQT09IiwiX3NlbGYiOiJkYnMvd2F4dUFBPT0vY29sbHMvd2F4dUFJaXE4dXc9L2RvY3Mvd2F4dUFJaXE4dXdCQUFBQUFBQUFBQT09LyIsIl9ldGFnIjoiXCJkZjAyMDA3YS0wMDAwLTAzMDAtMDAwMC02NzhiMTFjNTAwMDBcIiIsIl9hdHRhY2htZW50cyI6ImF0dGFjaG1lbnRzLyIsIl90cyI6MTczNzE2NzMwMSwiaWF0IjoxNzM3MTY3NDM4LCJleHAiOjE3Mzc3NzIyMzh9.avCdB_YZVtvEmmHdr2kS2ax-B9GU_SmzZWCE9-TP4-4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://nova-core-fjafg6dzf0h9dwhs.eastus-01.azurewebsites.net/facilities/824a15c6-5ac5-ff5b-a3e7-ffe14827c041",
+					"protocol": "https",
+					"host": [
+						"nova-core-fjafg6dzf0h9dwhs",
+						"eastus-01",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"facilities",
+						"824a15c6-5ac5-ff5b-a3e7-ffe14827c041"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Facility Image",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBlODU2MTM5LTgwY2QtNDEyNS05ZTI2LTAyZWU0OWUzYWYyNiIsInVzZXJuYW1lIjoiYWRtaW5Abm92YS5jb20iLCJmaXJzdE5hbWUiOiJhZG1pbiIsImxhc3ROYW1lIjoibm92YSIsImltYWdlVXJsIjoiaHR0cHM6Ly9zdGF0aWMudmVjdGVlenkuY29tL3N5c3RlbS9yZXNvdXJjZXMvcHJldmlld3MvMDAxLzg0MC82MTIvbm9uXzJ4L3BpY3R1cmUtcHJvZmlsZS1pY29uLW1hbGUtaWNvbi1odW1hbi1vci1wZW9wbGUtc2lnbi1hbmQtc3ltYm9sLWZyZWUtdmVjdG9yLmpwZyIsImVtYWlsIjoiYWRtaW5Abm92YS5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQuamJzUFNXUEZrb1IzWEZpQ0hyQ0kuTFhVcDdFYXBBWXdBTGZSWkNzOERLdkkxZi5XcGZSQyIsInBob25lTnVtYmVyIjoiOTM2NTM5NDIwIiwiaWRlbnRpZmljYXRpb25UeXBlIjoiRE5JIiwiaWRlbnRpZmljYXRpb25OdW1iZXIiOiI3Mjk0OTEwOSIsInJvbGVzIjpbIkFETUlOIl0sImNyZWF0ZWRBdCI6IjIwMjQtMTItMzBUMTg6MTM6MjkuODc3WiIsImNyZWF0ZWRCeSI6IlNZU1RFTSIsInVwZGF0ZWRBdCI6bnVsbCwidXBkYXRlZEJ5IjpudWxsLCJfcmlkIjoid2F4dUFJaXE4dXdCQUFBQUFBQUFBQT09IiwiX3NlbGYiOiJkYnMvd2F4dUFBPT0vY29sbHMvd2F4dUFJaXE4dXc9L2RvY3Mvd2F4dUFJaXE4dXdCQUFBQUFBQUFBQT09LyIsIl9ldGFnIjoiXCJkZjAyMDA3YS0wMDAwLTAzMDAtMDAwMC02NzhiMTFjNTAwMDBcIiIsIl9hdHRhY2htZW50cyI6ImF0dGFjaG1lbnRzLyIsIl90cyI6MTczNzE2NzMwMSwiaWF0IjoxNzM3MTY3NDM4LCJleHAiOjE3Mzc3NzIyMzh9.avCdB_YZVtvEmmHdr2kS2ax-B9GU_SmzZWCE9-TP4-4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/D:/Usuarios/ocabrera/OneDrive - Conecta Retail S.A/Escritorio/campo.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://nova-core-fjafg6dzf0h9dwhs.eastus-01.azurewebsites.net/facilities/824a15c6-5ac5-ff5b-a3e7-ffe14827c041/add-image",
+					"protocol": "https",
+					"host": [
+						"nova-core-fjafg6dzf0h9dwhs",
+						"eastus-01",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"facilities",
+						"824a15c6-5ac5-ff5b-a3e7-ffe14827c041",
+						"add-image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Facility Image",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBlODU2MTM5LTgwY2QtNDEyNS05ZTI2LTAyZWU0OWUzYWYyNiIsInVzZXJuYW1lIjoiYWRtaW5Abm92YS5jb20iLCJmaXJzdE5hbWUiOiJhZG1pbiIsImxhc3ROYW1lIjoibm92YSIsImltYWdlVXJsIjoiaHR0cHM6Ly9zdGF0aWMudmVjdGVlenkuY29tL3N5c3RlbS9yZXNvdXJjZXMvcHJldmlld3MvMDAxLzg0MC82MTIvbm9uXzJ4L3BpY3R1cmUtcHJvZmlsZS1pY29uLW1hbGUtaWNvbi1odW1hbi1vci1wZW9wbGUtc2lnbi1hbmQtc3ltYm9sLWZyZWUtdmVjdG9yLmpwZyIsImVtYWlsIjoiYWRtaW5Abm92YS5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQuamJzUFNXUEZrb1IzWEZpQ0hyQ0kuTFhVcDdFYXBBWXdBTGZSWkNzOERLdkkxZi5XcGZSQyIsInBob25lTnVtYmVyIjoiOTM2NTM5NDIwIiwiaWRlbnRpZmljYXRpb25UeXBlIjoiRE5JIiwiaWRlbnRpZmljYXRpb25OdW1iZXIiOiI3Mjk0OTEwOSIsInJvbGVzIjpbIkFETUlOIl0sImNyZWF0ZWRBdCI6IjIwMjQtMTItMzBUMTg6MTM6MjkuODc3WiIsImNyZWF0ZWRCeSI6IlNZU1RFTSIsInVwZGF0ZWRBdCI6bnVsbCwidXBkYXRlZEJ5IjpudWxsLCJfcmlkIjoid2F4dUFJaXE4dXdCQUFBQUFBQUFBQT09IiwiX3NlbGYiOiJkYnMvd2F4dUFBPT0vY29sbHMvd2F4dUFJaXE4dXc9L2RvY3Mvd2F4dUFJaXE4dXdCQUFBQUFBQUFBQT09LyIsIl9ldGFnIjoiXCJkZjAyMDA3YS0wMDAwLTAzMDAtMDAwMC02NzhiMTFjNTAwMDBcIiIsIl9hdHRhY2htZW50cyI6ImF0dGFjaG1lbnRzLyIsIl90cyI6MTczNzE2NzMwMSwiaWF0IjoxNzM3MTY3NDM4LCJleHAiOjE3Mzc3NzIyMzh9.avCdB_YZVtvEmmHdr2kS2ax-B9GU_SmzZWCE9-TP4-4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://nova-core-fjafg6dzf0h9dwhs.eastus-01.azurewebsites.net/facilities/824a15c6-5ac5-ff5b-a3e7-ffe14827c041/images/ef5b2d8d-de50-235c-4c46-38d27fbb6521",
+					"protocol": "https",
+					"host": [
+						"nova-core-fjafg6dzf0h9dwhs",
+						"eastus-01",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"facilities",
+						"824a15c6-5ac5-ff5b-a3e7-ffe14827c041",
+						"images",
+						"ef5b2d8d-de50-235c-4c46-38d27fbb6521"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBlODU2MTM5LTgwY2QtNDEyNS05ZTI2LTAyZWU0OWUzYWYyNiIsInVzZXJuYW1lIjoiYWRtaW5Abm92YS5jb20iLCJmaXJzdE5hbWUiOiJhZG1pbiIsImxhc3ROYW1lIjoibm92YSIsImltYWdlVXJsIjoiaHR0cHM6Ly9zdGF0aWMudmVjdGVlenkuY29tL3N5c3RlbS9yZXNvdXJjZXMvcHJldmlld3MvMDAxLzg0MC82MTIvbm9uXzJ4L3BpY3R1cmUtcHJvZmlsZS1pY29uLW1hbGUtaWNvbi1odW1hbi1vci1wZW9wbGUtc2lnbi1hbmQtc3ltYm9sLWZyZWUtdmVjdG9yLmpwZyIsImVtYWlsIjoiYWRtaW5Abm92YS5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQuamJzUFNXUEZrb1IzWEZpQ0hyQ0kuTFhVcDdFYXBBWXdBTGZSWkNzOERLdkkxZi5XcGZSQyIsInBob25lTnVtYmVyIjoiOTM2NTM5NDIwIiwiaWRlbnRpZmljYXRpb25UeXBlIjoiRE5JIiwiaWRlbnRpZmljYXRpb25OdW1iZXIiOiI3Mjk0OTEwOSIsInJvbGVzIjpbIkFETUlOIl0sImNyZWF0ZWRBdCI6IjIwMjQtMTItMzBUMTg6MTM6MjkuODc3WiIsImNyZWF0ZWRCeSI6IlNZU1RFTSIsInVwZGF0ZWRBdCI6bnVsbCwidXBkYXRlZEJ5IjpudWxsLCJfcmlkIjoid2F4dUFJaXE4dXdCQUFBQUFBQUFBQT09IiwiX3NlbGYiOiJkYnMvd2F4dUFBPT0vY29sbHMvd2F4dUFJaXE4dXc9L2RvY3Mvd2F4dUFJaXE4dXdCQUFBQUFBQUFBQT09LyIsIl9ldGFnIjoiXCJkZjAyMDA3YS0wMDAwLTAzMDAtMDAwMC02NzhiMTFjNTAwMDBcIiIsIl9hdHRhY2htZW50cyI6ImF0dGFjaG1lbnRzLyIsIl90cyI6MTczNzE2NzMwMSwiaWF0IjoxNzM4OTYwNDIwLCJleHAiOjE3Mzk1NjUyMjB9.F0t4V7m0vzzNwPtB-2k9t8ZFINjXIXS1dg_q9Jus87Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Pedrito\",\r\n    \"lastName\": \"Alimaña\",\r\n    \"phoneNumber\": \"936539421\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://nova-identity-ecerctbkbcdug4e8.eastus-01.azurewebsites.net/users/update-user",
+					"protocol": "https",
+					"host": [
+						"nova-identity-ecerctbkbcdug4e8",
+						"eastus-01",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"users",
+						"update-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find User By Email",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZVVybCI6Imh0dHBzOi8vbm92YXN0b3JhZ2VzdGFnaW5nMS5ibG9iLmNvcmUud2luZG93cy5uZXQvZmlsZXMvMDBiNTQ0ZGMtMjViMS1lODFjLTZkZTItNDhmZmIyNTRiNjU4LndlYnAiLCJpZCI6IjBlODU2MTM5LTgwY2QtNDEyNS05ZTI2LTAyZWU0OWUzYWYyNiIsInVzZXJuYW1lIjoiYWRtaW5Abm92YS5jb20iLCJlbWFpbCI6ImFkbWluQG5vdmEuY29tIiwiZmlyc3ROYW1lIjoiUGVkcml0byIsImxhc3ROYW1lIjoiQWxpbWHDsWEiLCJwYXNzd29yZCI6IiQyYiQxMCRPelVZN1RCWnVDaVpsaWxlWWYuZmF1UGQwSXVTTzZZREpvekF2T2RkVXhGL2RFLnVUZFNUbSIsInBob25lTnVtYmVyIjoiOTM2NTM5NDIxIiwiaWRlbnRpZmljYXRpb25UeXBlIjoiRE5JIiwiaWRlbnRpZmljYXRpb25OdW1iZXIiOiI3Mjk0OTEwOSIsInJvbGVzIjpbIkFETUlOIl0sImNyZWF0ZWRBdCI6IjIwMjQtMTItMzBUMTg6MTM6MjkuODc3WiIsImNyZWF0ZWRCeSI6IlNZU1RFTSIsInVwZGF0ZWRBdCI6IjIwMjUtMDItMDdUMjA6NTI6MTUuOTkwWiIsInVwZGF0ZWRCeSI6IjBlODU2MTM5LTgwY2QtNDEyNS05ZTI2LTAyZWU0OWUzYWYyNiIsIl9yaWQiOiJ3YXh1QUlpcTh1d0JBQUFBQUFBQUFBPT0iLCJfc2VsZiI6ImRicy93YXh1QUE9PS9jb2xscy93YXh1QUlpcTh1dz0vZG9jcy93YXh1QUlpcTh1d0JBQUFBQUFBQUFBPT0vIiwiX2V0YWciOiJcIjAzMDA5MzY4LTAwMDAtMDMwMC0wMDAwLTY3YTY3MjgxMDAwMFwiIiwiX2F0dGFjaG1lbnRzIjoiYXR0YWNobWVudHMvIiwiX3RzIjoxNzM4OTYxNTM3LCJpYXQiOjE3NDE0MDQ4NTAsImV4cCI6MTc0MjAwOTY1MH0.lZZWYO-PyXcUm0v68pHKqawsppBn_niW78CD_1zmBSg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Api.Identity}}/users/by/email/oscar157.2000@gmail.com",
+					"host": [
+						"{{Api.Identity}}"
+					],
+					"path": [
+						"users",
+						"by",
+						"email",
+						"oscar157.2000@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User Password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMyZDAwOTdjLTMxZTEtZWE5Yi1jMzIyLTI1OWY4NDdlNjQ4NiIsImZpcnN0TmFtZSI6Ik9zY2FyIiwibGFzdE5hbWUiOiJDYWJyZXJhIiwidXNlcm5hbWUiOiJvc2NhckBub3ZhLmNvbSIsImVtYWlsIjoib3NjYXJAbm92YS5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRxckF6ODY1ZnNiL1ouMEVsT25jTVIudEp3b3hHMmJ1bnprSmxYSGdyYWJZUHUyLi5HSU5WMiIsImltYWdlVXJsIjpudWxsLCJwaG9uZU51bWJlciI6IjkzNjUzOTQyMCIsImlkZW50aWZpY2F0aW9uVHlwZSI6IkROSSIsImlkZW50aWZpY2F0aW9uTnVtYmVyIjoiNzI5NDkxMDkiLCJjcmVhdGVkQXQiOiIyMDI1LTAzLTEwVDIyOjMyOjIyLjE0OFoiLCJjcmVhdGVkQnkiOiJkYmRhZTViNS0wMmNkLWYyOGItOWI3OC03NTg3MDhiZWNlMzEiLCJyb2xlcyI6WyJBRE1JTiJdLCJfcmlkIjoid2F4dUFJaXE4dXdJQUFBQUFBQUFBQT09IiwiX3NlbGYiOiJkYnMvd2F4dUFBPT0vY29sbHMvd2F4dUFJaXE4dXc9L2RvY3Mvd2F4dUFJaXE4dXdJQUFBQUFBQUFBQT09LyIsIl9ldGFnIjoiXCIwNzAwMTUwNy0wMDAwLTAzMDAtMDAwMC02N2NmNjkzMzAwMDBcIiIsIl9hdHRhY2htZW50cyI6ImF0dGFjaG1lbnRzLyIsIl90cyI6MTc0MTY0NjEzMSwiaWF0IjoxNzQxNjQ2MTg2LCJleHAiOjE3NDIyNTA5ODZ9.Q_f8ZzEoycXdweyV3SwgETSFj10F8RnqoAsCwksooNc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"oscar@nova.com\",\r\n    \"oldPassword\": \"Test@1234\",\r\n    \"newPassword\": \"Test@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Api.Identity}}/users/update-password",
+					"host": [
+						"{{Api.Identity}}"
+					],
+					"path": [
+						"users",
+						"update-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update UserImage",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQwY2Q2MWZjLTZjMWQtZGI2Ni05YjIyLTZkZTJhNDY1NDgzMiIsImZpcnN0TmFtZSI6Ik9zY2FyIiwibGFzdE5hbWUiOiJDYWJyZXJhIiwidXNlcm5hbWUiOiJvc2NhcjE1Ny4yMDAwQGdtYWlsLmNvbSIsImVtYWlsIjoib3NjYXIxNTcuMjAwMEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCQvQ2thZnR0S2UyeVVrMk1wZ29FZzdlUzI2ZmJWdjl1OHIuQ1IydHZwMWRtUUwvRXQ2VjBaNiIsImltYWdlVXJsIjpudWxsLCJwaG9uZU51bWJlciI6bnVsbCwiaWRlbnRpZmljYXRpb25UeXBlIjpudWxsLCJpZGVudGlmaWNhdGlvbk51bWJlciI6bnVsbCwiY3JlYXRlZEF0IjoiMjAyNS0wMS0xOFQwMjo0MDowNy4wNjFaIiwiY3JlYXRlZEJ5IjoiMGU4NTYxMzktODBjZC00MTI1LTllMjYtMDJlZTQ5ZTNhZjI2Iiwicm9sZXMiOlsiVVNFUiJdLCJfcmlkIjoid2F4dUFJaXE4dXdDQUFBQUFBQUFBQT09IiwiX3NlbGYiOiJkYnMvd2F4dUFBPT0vY29sbHMvd2F4dUFJaXE4dXc9L2RvY3Mvd2F4dUFJaXE4dXdDQUFBQUFBQUFBQT09LyIsIl9ldGFnIjoiXCJkZjAyMDE3YS0wMDAwLTAzMDAtMDAwMC02NzhiMTRiNjAwMDBcIiIsIl9hdHRhY2htZW50cyI6ImF0dGFjaG1lbnRzLyIsIl90cyI6MTczNzE2ODA1NCwiaWF0IjoxNzM4OTU5MDY3LCJleHAiOjE3Mzk1NjM4Njd9.5WWDZqgDVoiE69PxrSkHf4F-Ex3Lao_JUQwaGpNFD9I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/D:/Usuarios/ocabrera/OneDrive - Conecta Retail S.A/Escritorio/campo.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://nova-identity-ecerctbkbcdug4e8.eastus-01.azurewebsites.net/users/update-user-image",
+					"protocol": "https",
+					"host": [
+						"nova-identity-ecerctbkbcdug4e8",
+						"eastus-01",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"users",
+						"update-user-image"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
